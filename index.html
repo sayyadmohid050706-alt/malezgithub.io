@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Malez Analytics provides statistical analysis, data analytics and research support for healthcare and academic fields.">
+  <meta name="theme-color" content="#0b1b33">
+  <title>Malez Analytics | Healthcare Research & Data Analytics</title>
+  <style>
+    :root{--navy:#0b1b33;--navy2:#102847;--blue:#2563eb;--cyan:#5dd6d0;--ink:#14243a;--muted:#62738a;--paper:#f5f8fc;--white:#fff;--line:#e3eaf2;--shadow:0 18px 50px rgba(10,30,60,.10)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    .topbar{background:#071426;color:#c9d6e7;font-size:12px;padding:8px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:16px}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(227,234,242,.85)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.5px;color:var(--navy);font-size:19px}.brandmark{width:39px;height:39px;border-radius:12px;background:linear-gradient(145deg,#143c68,#2563eb);display:grid;place-items:center;color:white;font-weight:800;font-size:20px;box-shadow:0 7px 18px #2563eb33}.brand small{display:block;font-size:9px;letter-spacing:2px;color:#718198;font-weight:700;margin-top:-4px}
+    .navlinks{display:flex;align-items:center;gap:26px;font-size:13px;font-weight:650;color:#53647a}.navlinks a:hover{color:var(--blue)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:9px;padding:12px 18px;font-size:13px;font-weight:750;transition:.2s}.nav-cta,.btn.primary{background:var(--blue);color:#fff;box-shadow:0 8px 18px #2563eb2b}.nav-cta:hover,.btn.primary:hover{background:#174fc5;transform:translateY(-1px)}.menu{display:none;background:none;border:0;font-size:25px;color:var(--navy)}
+    .hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 82% 20%,#1b4778 0,transparent 34%),linear-gradient(120deg,#09182c,#102b4c 70%,#12345a);color:white;padding:94px 0 88px}.hero:after{content:"";position:absolute;width:450px;height:450px;border:1px solid #ffffff12;border-radius:50%;right:-120px;bottom:-260px;box-shadow:0 0 0 45px #ffffff08,0 0 0 90px #ffffff05}.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:60px;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#9be8e2;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.eyebrow:before{content:"";width:22px;height:2px;background:var(--cyan)}h1{font-size:clamp(39px,5.4vw,66px);line-height:1.08;letter-spacing:-2.5px;margin:20px 0 20px;max-width:680px}.hero h1 span{color:#77e0d8}.hero p{font-size:16px;color:#c5d3e4;max-width:580px;margin:0 0 29px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.btn.secondary{border:1px solid #ffffff45;color:#fff}.btn.secondary:hover{background:#ffffff12}.hero-note{font-size:11px;color:#9db1c9;margin-top:20px}
+    .visual{background:linear-gradient(145deg,#ffffff18,#ffffff08);border:1px solid #ffffff24;border-radius:18px;padding:22px;box-shadow:0 30px 70px #020b1855;backdrop-filter:blur(10px)}.visual-head{display:flex;justify-content:space-between;align-items:center;color:#dce8f7;font-size:12px;margin-bottom:24px}.live-dot{width:7px;height:7px;background:#6ee7b7;border-radius:50%;display:inline-block;margin-right:6px}.chart{height:160px;display:flex;align-items:end;gap:12px;padding:10px 8px 0;border-bottom:1px solid #ffffff35;background:repeating-linear-gradient(to bottom,transparent 0,transparent 39px,#ffffff12 40px)}.bar{flex:1;border-radius:5px 5px 0 0;background:linear-gradient(180deg,#6ce0d6,#397fe8);opacity:.9}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}.metric{background:#ffffff0c;border:1px solid #ffffff16;border-radius:10px;padding:12px}.metric strong{display:block;color:white;font-size:18px}.metric span{font-size:10px;color:#b7c9dd}
+    section{padding:82px 0}.section-head{text-align:center;max-width:680px;margin:0 auto 42px}.kicker{color:var(--blue);font-size:11px;font-weight:850;letter-spacing:2px;text-transform:uppercase}.section-head h2{font-size:clamp(28px,3.4vw,40px);letter-spacing:-1.2px;line-height:1.15;margin:12px 0;color:var(--navy)}.section-head p{color:var(--muted);font-size:14px;margin:0}
+    .services{background:var(--paper)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:14px;padding:25px;box-shadow:0 5px 20px #0b1b3306;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.iconbox{width:43px;height:43px;border-radius:12px;background:#eaf1ff;color:var(--blue);display:grid;place-items:center;font-size:20px;margin-bottom:17px}.card h3{font-size:17px;color:var(--navy);margin:0 0 9px}.card p{font-size:13px;color:var(--muted);margin:0 0 14px}.card ul{padding-left:17px;margin:0;color:#43546b;font-size:12px}.card li{margin:5px 0}
+    .specialties{background:#fff}.chips{display:flex;justify-content:center;flex-wrap:wrap;gap:11px;max-width:850px;margin:auto}.chip{padding:12px 17px;border:1px solid var(--line);border-radius:9px;background:#fff;color:#33465f;font-size:13px;font-weight:700;box-shadow:0 4px 12px #0b1b3305}.chip b{color:var(--blue);margin-right:5px}
+    .process{background:var(--paper)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.step{padding:22px 18px;border-left:2px solid #cbd9ee}.step-no{font-size:11px;font-weight:900;color:var(--blue);letter-spacing:1px}.step h3{font-size:15px;color:var(--navy);margin:9px 0 6px}.step p{font-size:12px;color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:55px;align-items:center}.about-panel{border-radius:16px;background:linear-gradient(145deg,#0c203b,#163e68);color:white;padding:32px;min-height:260px;display:flex;flex-direction:column;justify-content:space-between}.about-panel strong{font-size:25px;line-height:1.2;letter-spacing:-.6px}.about-panel span{color:#a9c4df;font-size:12px}.about-copy h2{font-size:34px;line-height:1.15;letter-spacing:-1px;color:var(--navy);margin:10px 0 15px}.about-copy p{font-size:14px;color:var(--muted)}.promise{display:flex;gap:10px;align-items:flex-start;margin-top:14px;font-size:13px;color:#33465f}.check{color:#149b83;font-weight:900}
+    .cta{background:linear-gradient(115deg,#0b1b33,#153e68);color:#fff;text-align:center;padding:66px 20px}.cta h2{font-size:clamp(27px,3.6vw,40px);letter-spacing:-1px;margin:0 0 12px}.cta p{color:#c3d2e4;font-size:14px;margin:0 auto 24px;max-width:600px}
+    .contact{background:#fff}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}.contact-copy h2{font-size:34px;line-height:1.15;color:var(--navy);letter-spacing:-1px;margin:10px 0}.contact-copy p{color:var(--muted);font-size:14px}.contact-box{border:1px solid var(--line);border-radius:15px;padding:25px;box-shadow:var(--shadow)}label{display:block;font-size:12px;font-weight:750;color:#34465d;margin:0 0 6px}input,select,textarea{width:100%;border:1px solid #d8e1ec;border-radius:8px;padding:12px 13px;font:inherit;font-size:13px;margin-bottom:14px;background:#fbfcfe;color:var(--ink)}textarea{min-height:100px;resize:vertical}.contact-box button{width:100%;border:0;cursor:pointer}.fineprint{font-size:10px;color:#7b8a9d;margin-top:12px}
+    footer{background:#071426;color:#aabbd0;padding:28px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:11px}.footer-brand{color:#fff;font-size:15px;font-weight:800}.footer-links{display:flex;gap:18px}
+    .wa-float{position:fixed;right:20px;bottom:20px;z-index:30;background:#16a36a;color:white;border-radius:50px;padding:13px 17px;font-size:12px;font-weight:800;box-shadow:0 8px 24px #061b1740}
+    @media(max-width:800px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:white;padding:18px 22px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:17px}.navlinks.open{display:flex}.navlinks .nav-cta{display:inline-flex}.menu{display:block}.hero{padding:70px 0}.hero-grid{grid-template-columns:1fr;gap:38px}.visual{max-width:520px}.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.about-grid{grid-template-columns:1fr;gap:25px}.contact-grid{grid-template-columns:1fr;gap:25px}}
+    @media(max-width:520px){.wrap{width:min(100% - 30px,1120px)}.topbar .wrap{font-size:10px}.topbar .wrap span:last-child{display:none}nav{height:68px}.navlinks{top:68px}.brand{font-size:17px}.hero{padding:58px 0}.hero h1{letter-spacing:-1.6px}.hero p{font-size:14px}.visual{padding:16px}.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}section{padding:62px 0}.metrics{gap:6px}.metric{padding:9px}.metric strong{font-size:15px}.footer-row{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.wa-float{right:13px;bottom:13px}}
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="wrap"><span>HEALTHCARE RESEARCH · STATISTICS · DATA ANALYTICS</span><span>Clear analysis. Confident research.</span></div></div>
+  <header>
+    <nav class="wrap">
+      <a class="brand" href="#home" aria-label="Malez Analytics home"><span class="brandmark">M</span><span>MALEZ ANALYTICS<small>RESEARCH · DATA · INSIGHT</small></span></a>
+      <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
+      <div class="navlinks" id="navlinks">
+        <a href="#services">Services</a><a href="#fields">Fields</a><a href="#process">Our Process</a><a href="#about">About</a><a href="#contact" class="nav-cta">Get in touch ↗</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Healthcare research & analytics</div>
+          <h1>Make your research data <span>make sense.</span></h1>
+          <p>Statistical analysis and data analytics support for students, scholars and professionals across medical, dental, AYUSH, physiotherapy and allied health sciences.</p>
+          <div class="hero-actions"><a class="btn primary" href="#contact">Discuss your project <span>↗</span></a><a class="btn secondary" href="#services">Explore services ↓</a></div>
+          <div class="hero-note">Statistician-reviewed work · Clear reporting · Research-focused support</div>
+        </div>
+        <div class="visual" aria-label="Decorative data visualization">
+          <div class="visual-head"><span>RESEARCH DATA INSIGHTS</span><span><i class="live-dot"></i> ANALYTICS</span></div>
+          <div class="chart"><div class="bar" style="height:38%"></div><div class="bar" style="height:57%"></div><div class="bar" style="height:48%"></div><div class="bar" style="height:76%"></div><div class="bar" style="height:62%"></div><div class="bar" style="height:91%"></div><div class="bar" style="height:72%"></div><div class="bar" style="height:100%"></div></div>
+          <div class="metrics"><div class="metric"><strong>Data</strong><span>Organised</span></div><div class="metric"><strong>Tests</strong><span>Appropriate</span></div><div class="metric"><strong>Results</strong><span>Interpreted</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">What we do</div><h2>Research support, from raw data to clear results.</h2><p>Practical statistical and analytical assistance tailored to your study design, objectives and dataset.</p></div>
+        <div class="cards">
+          <article class="card"><div class="iconbox">▥</div><h3>Statistical Analysis</h3><p>Choose and apply suitable statistical methods based on the research question and data.</p><ul><li>Descriptive statistics</li><li>Chi-square, t-tests and ANOVA</li><li>Correlation and regression</li><li>Non-parametric tests</li></ul></article>
+          <article class="card"><div class="iconbox">⌘</div><h3>Data Management</h3><p>Prepare research datasets so they are organised, consistent and ready for analysis.</p><ul><li>Data entry and coding support</li><li>Data cleaning and validation</li><li>Questionnaire and survey datasets</li><li>Excel and SPSS support</li></ul></article>
+          <article class="card"><div class="iconbox">▤</div><h3>Results & Visualisation</h3><p>Present findings in a clear format that readers can understand and evaluate.</p><ul><li>Tables, charts and graphs</li><li>Statistical result interpretation</li><li>Research-ready summaries</li><li>Report formatting support</li></ul></article>
+          <article class="card"><div class="iconbox">⌕</div><h3>Research Planning</h3><p>Get guidance on the analytical plan before collecting or analysing study data.</p><ul><li>Study variable planning</li><li>Sample size estimation support</li><li>Test selection guidance</li><li>Questionnaire data planning</li></ul></article>
+          <article class="card"><div class="iconbox">▧</div><h3>Thesis & Dissertation Support</h3><p>Statistical support for academic projects, dissertations and research studies.</p><ul><li>Methods and analysis guidance</li><li>Results section support</li><li>Tables and figure preparation</li><li>Explanation of statistical outputs</li></ul></article>
+          <article class="card"><div class="iconbox">⌁</div><h3>Data Insights</h3><p>Explore patterns and relationships in clinical, academic and survey datasets.</p><ul><li>Exploratory data analysis</li><li>Trend and group comparisons</li><li>Visual summaries</li><li>Evidence-based interpretation</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="specialties" id="fields">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Fields we support</div><h2>One analytics partner. Multiple disciplines.</h2><p>Support for a wide range of healthcare and allied health research areas.</p></div>
+        <div class="chips"><span class="chip"><b>01</b> MBBS · MD · MS</span><span class="chip"><b>02</b> BDS · MDS</span><span class="chip"><b>03</b> BAMS · MD Ayurveda</span><span class="chip"><b>04</b> BHMS</span><span class="chip"><b>05</b> BUMS · Unani</span><span class="chip"><b>06</b> BPT · MPT</span><span class="chip"><b>07</b> Nursing</span><span class="chip"><b>08</b> Pharmacy</span><span class="chip"><b>09</b> Allied Health Sciences</span><span class="chip"><b>10</b> Other academic research</span></div>
+      </div>
+    </section>
+
+    <section class="process" id="process">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">Simple workflow</div><h2>A clear process at every step.</h2><p>Know what happens to your project, from first conversation to final explanation.</p></div>
+        <div class="steps">
+          <div class="step"><div class="step-no">STEP 01</div><h3>Share your requirements</h3><p>Tell us your research topic, objectives, study design and what support you need.</p></div>
+          <div class="step"><div class="step-no">STEP 02</div><h3>Review the data</h3><p>We discuss the dataset, variables, data quality and suitable analytical approach.</p></div>
+          <div class="step"><div class="step-no">STEP 03</div><h3>Analyse & prepare</h3><p>Analysis and presentation are carried out in line with the agreed scope.</p></div>
+          <div class="step"><div class="step-no">STEP 04</div><h3>Explain the findings</h3><p>Receive organised outputs and a clear explanation of the results and limitations.</p></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section style="padding:54px 0;background:#f5f8fc" id="professional-review">
+      <div class="wrap" style="max-width:900px">
+        <div class="section-head" style="margin-bottom:24px"><div class="kicker">Professional oversight</div><h2>Statistical review you can trust.</h2><p>Every project handled by Malez Analytics is reviewed by our affiliated professional statistician.</p></div>
+        <div style="background:#fff;border:1px solid #e3eaf2;border-radius:14px;padding:28px;text-align:center;box-shadow:0 12px 35px rgba(10,30,60,.07)">
+          <div style="font-size:11px;font-weight:850;letter-spacing:2px;color:#2563eb;text-transform:uppercase">Affiliated Professional Statistician</div>
+          <h3 style="font-size:25px;line-height:1.2;color:#0b1b33;margin:10px 0 8px">Dr. Mehmood Gulab Sayyad</h3>
+          <p style="font-size:14px;color:#62738a;max-width:680px;margin:0 auto">Statistical work completed through Malez Analytics is subject to review by Dr. Mehmood Gulab Sayyad, supporting methodological appropriateness, accuracy and clear interpretation of findings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about-grid">
+        <div class="about-panel"><span>MALEZ ANALYTICS</span><strong>Good research deserves clear, responsible analysis.</strong><span>Statistician-reviewed · Confidential · Evidence-led</span></div>
+        <div class="about-copy"><div class="kicker">Our approach</div><h2>Accuracy first. Clarity always.</h2><p>Malez Analytics aims to make statistical methods and research data easier to work with. We focus on understanding each study before selecting analytical methods, and on presenting findings in a transparent, understandable way.</p><div class="promise"><span class="check">✓</span><span>Every statistical assignment is reviewed by our affiliated statistician, Dr. Mehmood Gulab Sayyad.</span></div>
+        <div class="promise"><span class="check">✓</span><span>Methods selected to suit the study design and type of data.</span></div><div class="promise"><span class="check">✓</span><span>Results reported transparently, including relevant limitations.</span></div><div class="promise"><span class="check">✓</span><span>No fabricated observations, manipulated outcomes or guaranteed significance.</span></div><div class="promise"><span class="check">✓</span><span>Client data should be shared securely and only with appropriate permission.</span></div></div>
+      </div>
+    </section>
+
+    <section class="cta"><div class="wrap"><h2>Have a research project in mind?</h2><p>Start with a conversation. Share your field, research objective and the kind of analysis you need.</p><a class="btn primary" href="#contact">Send an enquiry ↗</a></div></section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-copy"><div class="kicker">Let's connect</div><h2>Tell us about your project.</h2><p>Use the enquiry form to prepare a WhatsApp message. Add your WhatsApp number in the website settings before publishing so visitors can contact you directly.</p><p><strong>Helpful details to include:</strong><br>• Course / discipline<br>• Research topic and objectives<br>• Study design and sample size<br>• Software or analysis requested<br>• Expected timeline</p></div>
+        <form class="contact-box" id="enquiryForm">
+          <label for="person">Your name</label><input id="person" name="person" placeholder="Enter your name" required>
+          <label for="discipline">Course / discipline</label><select id="discipline" name="discipline" required><option value="">Select your field</option><option>BDS / MDS</option><option>MBBS / MD / MS</option><option>BAMS / Ayurveda</option><option>BHMS</option><option>BUMS / Unani</option><option>BPT / MPT</option><option>Nursing</option><option>Pharmacy</option><option>Other</option></select>
+          <label for="need">What support do you need?</label><textarea id="need" name="need" placeholder="Briefly describe your research or analysis requirements..." required></textarea>
+          <button class="btn primary" type="submit">Prepare WhatsApp enquiry ↗</button>
+          <div class="fineprint">Please do not submit patient names, identifiable health information or other sensitive personal data through this form.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-row"><div><div class="footer-brand">MALEZ ANALYTICS</div><div>Research · Data · Insight</div></div><div class="footer-links"><a href="#services">Services</a><a href="#fields">Fields</a><a href="#contact">Contact</a></div><div>© <span id="year"></span> Malez Analytics</div></div></footer>
+  <a class="wa-float" href="#contact" aria-label="Contact Malez Analytics">WhatsApp enquiry ↗</a>
+  <script>
+    // SETUP: Replace the placeholder below with your WhatsApp number, including country code, digits only.
+    // Example for India: 919876543210 (do not include +, spaces or dashes).
+    const WHATSAPP_NUMBER = "919209210213";
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById("menuBtn"), navlinks = document.getElementById("navlinks");
+    menuBtn.addEventListener("click",()=>navlinks.classList.toggle("open"));
+    navlinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>navlinks.classList.remove("open")));
+    document.getElementById("enquiryForm").addEventListener("submit",function(e){
+      e.preventDefault();
+      if(!/^[0-9]{10,15}$/.test(WHATSAPP_NUMBER) || WHATSAPP_NUMBER.includes("X")){
+        alert("The website owner needs to add a valid 10–15 digit WhatsApp number in the WHATSAPP_NUMBER setting before enquiries can be sent.");
+        return;
+      }
+      const name=document.getElementById("person").value.trim();
+      const field=document.getElementById("discipline").value;
+      const need=document.getElementById("need").value.trim();
+      const msg=`Hello Malez Analytics,%0A%0AMy name: ${encodeURIComponent(name)}%0ADiscipline: ${encodeURIComponent(field)}%0AProject requirements: ${encodeURIComponent(need)}`;
+      window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`,"_blank","noopener");
+    });
+  </script>
+</body>
+</html>
